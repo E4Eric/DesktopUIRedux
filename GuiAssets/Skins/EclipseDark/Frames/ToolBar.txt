@@ -1,0 +1,5 @@
+{
+  "th": 0, "bh": 0, "lw": 5, "rw": 0, 
+  "tm": 0, "bm": 0, "lm": 0, "rm": 0,
+  "font-spec": "White" 
+}

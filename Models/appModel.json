@@ -1,0 +1,23 @@
+{
+"appname" : "Omni Gui",
+    "type": "Window",
+    "style": "Window",
+    "layout": "panel",
+    "shellTitle": "Test Omni UI 2",
+    "shellX": "100", "shellY": "100", "shellWidth": "800", "shellHeight": "600",
+    "contents": [
+      { "type": "Trim", "style": "Trim", "side": "top", "layout": "tile",
+        "contents": [
+          { "style": "ToolBar", "layout": "pack", 
+            "contents": [
+              { "style": "ToolItem", "icon": "Debug" },
+              { "style": "ToolItem", "icon": "Save" },
+              { "style": "ToolItem", "icon": "Stop" }
+            ]
+          }
+        ]
+      }
+    ]
+    
+  }
+}

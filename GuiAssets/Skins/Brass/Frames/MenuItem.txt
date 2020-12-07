@@ -1,0 +1,5 @@
+{
+  "th": 7, "bh": 7, "lw": 7, "rw": 7, 
+  "tm": 0, "bm": 0, "lm": 5, "rm": 5,
+  "font-spec": "Black" 
+}
