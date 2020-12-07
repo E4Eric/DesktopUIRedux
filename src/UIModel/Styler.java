@@ -400,7 +400,8 @@ public class Styler {
 		if (element.has("icon")) {
 			String iconName = element.optString("icon");
 			Image iconImage = getIcon(iconName);
-			gc.drawImage(iconImage, curX, curY);
+			int iconY = drawRect.y + (drawRect.height / 2) - (iconImage.getImageData().height / 2); 
+			gc.drawImage(iconImage, curX, iconY);
 			curX += iconImage.getImageData().width;
 			if (element.has("label")) {
 				curX += 3;
