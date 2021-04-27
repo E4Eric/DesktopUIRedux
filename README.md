@@ -27,6 +27,8 @@ Turns out that there are only two concepts needed:
    - Has label text and / or an icon
    - Size determined based on the text and / or icon's bounding box
 
+The layout logic is aided by the observation that IDEs layouts always tile completely (they don't have 'holes'). I take the approach that each top-level step in the layout chews some 'slab' from the existing available space and reduces the remaining space accordingly. So basically it chews around the edges leaving the central area open (to show the editor area).
+
 Styling is done through defined 'GuiAssets'. This is a directory that contains the following structure:
  - GuiAssets / Skins / Individual Skins (eg. 'Eclipse')
    - Frames (which contains an image and style parameter file for each 'type' of element)
@@ -39,7 +41,7 @@ step is just a simple rectangle manager which sets each element's *screen* posit
 
 Behavior in all UI's is a process of mapping the avaiable inputs from keyboard / mouse / other? to response 'actions'. Here the UI uses the same action implementation as the User uses to define their own. All actions are simple POJO's (found in the "Actions" directory)
 
-# Use
+## Use
 
 To use this example:
  - Clone this repo into an eclipse project
@@ -50,4 +52,11 @@ To use this example:
 You can switch skins by using 'e' (Eclipse), 'E' (Eclipse Dark), 't' (Test) and for fun 'b' (Brass, uses Baroque frames...;-)
 Entering 's' is a performance test that loops the layout / draw cycle for 1 second and reports the count
 
+# TBD
+
+I left these as I was anticipating moving this POC into one containing the ModelRedux (a minimalist model engine) since it would properly support reacting to changes in the UI model. However even as small as the ModelRedux is I'm considering whether it's necessary at all.
+
+ - Add a 'view' layout (just a 'pane' layout with a 'resizable' flag and adds a 'drag rect' to the side opposite of the one that the element is on)
+ - Hook up more of the events, specifically sash resizing and hover to open sub-menus
+ - KB navigation both for the UI generally and menus in particular
 
