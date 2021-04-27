@@ -31,3 +31,20 @@ Styling is done through defined 'GuiAssets'. This is a directory that contains t
  - GuiAssets / Skins / Individual Skins (eg. 'Eclipse')
    - Frames (which contains an image and style parameter file for each 'type' of element)
    - Icons (which contains the icons to use for various common operations like 'Save'....)
+
+The actual rendering is done using the usual 'layout' / 'paint' pattern. The difference here is that the layout
+step is just a simple rectangle manager which sets each element's *screen* position, alllowing paint step to just recursively paint each element with no further processing.
+
+## Behavior
+
+Behavior in all UI's is a process of mapping the avaiable inputs from keyboard / mouse / other? to response 'actions'. Here the UI uses the same action implementation as the User uses to define their own. All actions are simple POJO's (found in the "Actions" directory)
+
+# Use
+
+To use this example:
+ - Clone this repo into an eclipse project
+ - Change the project to reference the provided SWT jar
+ - Change the project to reference a JSON implementation (not provided)
+ - Run "UIModelTest"
+
+
