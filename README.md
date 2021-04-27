@@ -47,4 +47,7 @@ To use this example:
  - Change the project to reference a JSON implementation (not provided)
  - Run "UIModelTest"
 
+You can switch skins by using 'e' (Eclipse), 'E' (Eclipse Dark), 't' (Test) and for fun 'b' (Brass, uses Baroque frames...;-)
+Entering 's' is a performance test that loops the layout / draw cycle for 1 second and reports the count
+
 
